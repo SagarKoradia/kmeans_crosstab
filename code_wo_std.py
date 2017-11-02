@@ -14,3 +14,6 @@ labels = model.fit_predict(X)
 dff = pd.DataFrame({'labels': labels, 'seasons': seasons})
 ct = pd.crosstab(dff['labels'], dff['seasons'])
 print(ct)
+
+model_inertia = model.inertia_
+print('Inertia without Standardization (4 Clusters): {}'.format(model_inertia))
